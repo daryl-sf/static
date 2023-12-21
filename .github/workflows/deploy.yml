@@ -35,7 +35,9 @@ jobs:
           node-version: 20
 
       - name: 📦 Install dependencies
-        run: npm install
+        run: |
+          npm install
+          npx next telemetry disable
 
       - name: ⚙️ Set up AWS CLI
         uses: aws-actions/configure-aws-credentials@v1
@@ -50,7 +52,3 @@ jobs:
       - name: 🚀 Deploy Production
         if: github.ref == 'refs/heads/main'
         run: aws s3 sync out/ s3://${{ secrets.S3_BUCKET_NAME }} --delete
-
-      - name: 🚀 Deploy Staging
-        if: github.ref != 'refs/heads/main'
-        run: aws s3 sync out/ s3://${{ secrets.S3_BUCKET_NAME }}/${{ github.event.pull_request.number }} --delete
