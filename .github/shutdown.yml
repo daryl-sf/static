@@ -1,0 +1,30 @@
+name: 🧹 Clean up preview
+on:
+  pull_request:
+    types:
+      - closed
+
+permissions:
+  actions: write
+  contents: write
+  issues: write
+  pull-requests: write
+  packages: write
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  clean-up:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⚙️ Set up AWS CLI
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.S3_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.S3_AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-west-1
+
+      - name: 🧹 Clean up preview
+        run: aws s3 rm s3://${{ secrets.S3_BUCKET_NAME }}/${{ github.event.pull_request.number }} --recursive
