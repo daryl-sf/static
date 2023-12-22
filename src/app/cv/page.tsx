@@ -3,26 +3,7 @@ import Image from "next/image";
 
 export default function CV() {
   return (
-    <main className="flex min-h-screen flex-col items-center gap-20 p-12 lg:p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm flex">
-        <Link
-          className="transition-colors hover:text-sky-400 dark:hover:text-sky-600 hover:underline"
-          href="/"
-        >
-          <Image
-            className="relative"
-            src="/logo.svg"
-            alt="Next.js Logo"
-            width={48}
-            height={28}
-            priority
-          />
-        </Link>
-        <div className="flex items-center justify-center bg-gradient-to-t lg:static lg:h-auto lg:w-auto lg:bg-none">
-          Daryl Findlay
-        </div>
-      </div>
-
+    <>
       <section className="relative flex flex-col gap-8 w-full max-w-5xl before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
         <h2 className="relative z-10 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-sky-900 to-blue-900 dark:from-sky-200 dark:to-blue-200 lg:text-4xl">
           Experience
@@ -118,6 +99,6 @@ export default function CV() {
           </p>
         </div>
       </section>
-    </main>
+    </>
   );
 }
