@@ -1,10 +1,18 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p></p>
+        <Image
+          className="relative"
+          src="/logo.svg"
+          alt="Next.js Logo"
+          width={48}
+          height={28}
+          priority
+        />
         <div className="flex w-full items-end justify-center bg-gradient-to-t lg:static lg:h-auto lg:w-auto lg:bg-none">
           Daryl Findlay
         </div>
