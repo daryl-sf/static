@@ -4,11 +4,78 @@ import Image from "next/image";
 export default function CV() {
   return (
     <>
-      <section className="relative flex flex-col gap-8 w-full max-w-5xl before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <h2 className="relative z-10 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-sky-900 to-blue-900 dark:from-sky-200 dark:to-blue-200 lg:text-4xl">
+      <section className="relative flex flex-col gap-8 w-full max-w-5xl">
+        <h2 className="relative z-10 text-3xl font-bold lg:text-4xl bg-gradient-to-l from-sky-300 to-indigo-600 bg-clip-text text-transparent">
+          About Me
+        </h2>
+        <div className="group rounded-lg border px-5 py-4 border-neutral-700 bg-neutral-800/30">
+          <div className="flex gap-10 mb-4 items-center">
+            <Image
+              src="/images/daryl.jpeg"
+              alt="Picture of the author"
+              width={200}
+              height={200}
+              className="rounded-full"
+            />
+            <div>
+              <h3 className={`mb-3 text-2xl font-semibold text-[#bae6fd]`}>
+                Daryl Findlay
+              </h3>
+              <p className={`font-semibold opacity-50 mb-2`}>
+                Software Engineer
+              </p>
+              <p className={`font-semibold opacity-50 mb-2`}>Derry, UK</p>
+              <p className={`font-semibold opacity-80 mb-2 flex gap-4`}>
+                <a
+                  href="https://www.linkedin.com/in/daryl-findlay-3b08238a/"
+                  className=" text-blue-500 hover:underline"
+                >
+                  LinkedIn
+                </a>
+                <span className="opacity-80">|</span>
+                <a
+                  href="mailto:darylfindlay@gmail.com"
+                  className="text-blue-500 hover:underline"
+                >
+                  darylfindlay@gmail.com
+                </a>
+              </p>
+            </div>
+          </div>
+          <p className={`mb-6`}>
+            I am a Senior Software Engineer with over 10 years of experience
+            building web applications. I have a passion for building
+            user-friendly, performant and accessible web applications. I am
+            currently working as a Senior Software Engineer at Songtradr.
+          </p>
+          <p className={`mb-6`}>
+            I am a Full Stack Senior Software Developer with extensive
+            experience in developing cloud and web applications. My expertise
+            lies in test-driven development and I have proficiency in various
+            programming languages such as JavaScript, TypeScript, and Ruby on
+            Rails. I am adept at working with popular frameworks and libraries
+            such as NodeJS, ExpressJS, React, NextJS, Remix, and Vite. My
+            knowledge of SQL and no SQL databases including Postgres, MySql and
+            Dynamodb allows me to design and develop efficient data structures.
+            I am well-versed in RESTful web services and GraphQL, and have
+            experience working with testing frameworks such as Jest, Vitest,
+            Enzyme, RSpec, Cypress, Playwright and React Testing Library. I also
+            have experience with containerization using Docker. I hold a
+            Bachelor of Science in Computer Science from the University of
+            Ulster.
+          </p>
+          <p className={`mb-6`}>
+            I am a big fan of React, TypeScript, Remix, Next.js, Tailwind CSS
+            and GraphQL.
+          </p>
+        </div>
+      </section>
+
+      <section className="relative flex flex-col gap-8 w-full max-w-5xl">
+        <h2 className="relative z-10 text-3xl font-bold lg:text-4xl bg-gradient-to-l from-sky-300 to-indigo-600 bg-clip-text text-transparent">
           Experience
         </h2>
-        <div className="group rounded-lg border px-5 py-4 border-gray-300 bg-gray-100 dark:border-neutral-700 dark:bg-neutral-800/30">
+        <div className="group rounded-lg border px-5 py-4 border-neutral-700 bg-neutral-800/30">
           <h3 className={`mb-3 text-2xl font-semibold text-[#bae6fd]`}>
             Songtradr
           </h3>
@@ -21,7 +88,7 @@ export default function CV() {
             visualisations and Songtradr Component Library.
           </p>
         </div>
-        <div className="group rounded-lg border px-5 py-4 border-gray-300 bg-gray-100 dark:border-neutral-700 dark:bg-neutral-800/30">
+        <div className="group rounded-lg border px-5 py-4 border-neutral-700 bg-neutral-800/30">
           <h3 className={`mb-3 text-2xl font-semibold text-[#bae6fd]`}>
             SquareFoot
           </h3>
@@ -56,7 +123,7 @@ export default function CV() {
             Ruby on Rails backend using GraphQL interface.
           </p>
         </div>
-        <div className="group rounded-lg border px-5 py-4 border-gray-300 bg-gray-100 dark:border-neutral-700 dark:bg-neutral-800/30">
+        <div className="group rounded-lg border px-5 py-4 border-neutral-700 bg-neutral-800/30">
           <h3 className={`mb-3 text-2xl font-semibold text-[#bae6fd]`}>
             Allstate
           </h3>
