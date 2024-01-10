@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <main className="flex min-h-screen flex-col items-center gap-20 p-12 lg:p-24">
+        <main className="flex min-h-screen flex-col items-center gap-20 p-6 md:p-12 lg:p-24">
           <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm flex">
             <Link
               className="transition-colors hover:text-sky-400 dark:hover:text-sky-600 hover:underline"

@@ -9,13 +9,13 @@ export default function CV() {
           About Me
         </h2>
         <div className="group rounded-lg border px-5 py-4 border-neutral-700 bg-neutral-800/30">
-          <div className="flex gap-10 mb-4 items-center">
+          <div className="flex gap-10 mb-4 items-center flex-wrap">
             <Image
               src="/images/daryl.jpeg"
               alt="Picture of the author"
               width={200}
               height={200}
-              className="rounded-full"
+              className="rounded-full mx-auto md:mx-0"
             />
             <div>
               <h3 className={`mb-3 text-2xl font-semibold text-[#bae6fd]`}>
@@ -25,14 +25,16 @@ export default function CV() {
                 Software Engineer
               </p>
               <p className={`font-semibold opacity-50 mb-2`}>Derry, UK</p>
-              <p className={`font-semibold opacity-80 mb-2 flex gap-4`}>
+              <p
+                className={`font-semibold opacity-80 mb-2 flex gap-4 flex-wrap`}
+              >
                 <a
                   href="https://www.linkedin.com/in/daryl-findlay-3b08238a/"
                   className=" text-blue-500 hover:underline"
                 >
                   LinkedIn
                 </a>
-                <span className="opacity-80">|</span>
+                <span className="opacity-80 hidden sm:block">|</span>
                 <a
                   href="mailto:darylfindlay@gmail.com"
                   className="text-blue-500 hover:underline"
