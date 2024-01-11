@@ -8,7 +8,7 @@ export default function CV() {
         <h2 className="relative z-10 text-3xl font-bold lg:text-4xl bg-gradient-to-l from-sky-300 to-indigo-600 bg-clip-text text-transparent">
           About Me
         </h2>
-        <div className="group rounded-lg border px-5 py-4 border-neutral-700 bg-neutral-800/30">
+        <div className="group rounded-lg border px-5 py-4 border-neutral-700 bg-neutral-800/30 animate-fade-in-up">
           <div className="flex gap-10 mb-4 items-center flex-wrap">
             <Image
               src="/images/daryl.jpeg"
