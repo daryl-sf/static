@@ -13,8 +13,6 @@ export default function Home() {
         <Link
           href="/apps"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-neutral-700 hover:bg-neutral-800/30 md:animate-fade-in-down animate-fade-in-left"
-          target="_blank"
-          rel="noopener noreferrer"
         >
           <h2 className={`mb-3 text-2xl font-semibold`}>Apps</h2>
           <p className={`m-0 max-w-[30ch] text-sm text-gray-400`}>
