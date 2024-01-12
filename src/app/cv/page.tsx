@@ -1,11 +1,10 @@
-import Link from "next/link";
 import Image from "next/image";
 
 export default function CV() {
   return (
     <>
       <section className="relative flex flex-col gap-8 w-full max-w-5xl">
-        <h2 className="relative z-10 text-3xl font-bold lg:text-4xl bg-gradient-to-l from-sky-300 to-indigo-600 bg-clip-text text-transparent">
+        <h2 className="relative z-10 text-3xl font-bold lg:text-4xl bg-gradient-to-l from-sky-300 to-indigo-600 bg-clip-text text-transparent animate-fade-in-right">
           About Me
         </h2>
         <div className="group rounded-lg border px-5 py-4 border-neutral-700 bg-neutral-800/30 animate-fade-in-up">
@@ -74,10 +73,10 @@ export default function CV() {
       </section>
 
       <section className="relative flex flex-col gap-8 w-full max-w-5xl">
-        <h2 className="relative z-10 text-3xl font-bold lg:text-4xl bg-gradient-to-l from-sky-300 to-indigo-600 bg-clip-text text-transparent">
+        <h2 className="relative z-10 text-3xl font-bold lg:text-4xl bg-gradient-to-l from-sky-300 to-indigo-600 bg-clip-text text-transparent animate-fade-in-right">
           Experience
         </h2>
-        <div className="group rounded-lg border px-5 py-4 border-neutral-700 bg-neutral-800/30">
+        <div className="group rounded-lg border px-5 py-4 border-neutral-700 bg-neutral-800/30 animate-fade-in-up">
           <h3 className={`mb-3 text-2xl font-semibold text-[#bae6fd]`}>
             Songtradr
           </h3>
@@ -90,7 +89,7 @@ export default function CV() {
             visualisations and Songtradr Component Library.
           </p>
         </div>
-        <div className="group rounded-lg border px-5 py-4 border-neutral-700 bg-neutral-800/30">
+        <div className="group rounded-lg border px-5 py-4 border-neutral-700 bg-neutral-800/30 animate-fade-in-up">
           <h3 className={`mb-3 text-2xl font-semibold text-[#bae6fd]`}>
             SquareFoot
           </h3>
@@ -125,7 +124,7 @@ export default function CV() {
             Ruby on Rails backend using GraphQL interface.
           </p>
         </div>
-        <div className="group rounded-lg border px-5 py-4 border-neutral-700 bg-neutral-800/30">
+        <div className="group rounded-lg border px-5 py-4 border-neutral-700 bg-neutral-800/30 animate-fade-in-up">
           <h3 className={`mb-3 text-2xl font-semibold text-[#bae6fd]`}>
             Allstate
           </h3>
