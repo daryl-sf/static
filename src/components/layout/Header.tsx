@@ -3,48 +3,45 @@ import Image from "next/image";
 
 interface IHeaderProps {
   color?: "yellow" | "blue" | "green" | "red";
+  title: string;
 }
 
 const colorMap = {
-  yellow: "from-zinc-900 to-yellow-950",
-  blue: "from-zinc-900 to-blue-950",
-  green: "from-zinc-900 to-green-950",
-  red: "from-zinc-900 to-red-950",
+  yellow: { bg: "from-zinc-900 to-yellow-950", text: "text-yellow-200" },
+  blue: { bg: "from-zinc-900 to-blue-950", text: "text-blue-200" },
+  green: { bg: "from-zinc-900 to-green-950", text: "text-green-200" },
+  red: { bg: "from-zinc-900 to-red-950", text: "text-red-200" },
 };
 
-export default function Header({ color = "yellow" }: IHeaderProps) {
+export default function Header({ color = "yellow", title }: IHeaderProps) {
   return (
     <div
-      id="hero"
-      className={`relative m-h-96 bg-gradient-to-br ${colorMap[color]}`}
+      className={`relative bg-[url('/images/hero-stones.jpeg')] bg-cover bg-hero bg-no-repeat`}
     >
-      <div
-        id="hero-overlay"
-        className="absolute bg-neutral-950 opacity-15 h-full w-full"
-      />
-      <div className="max-w-6xl mx-auto flex items-center justify-between pt-6">
-        <Link
-          className="transition-colors hover:text-sky-400 dark:hover:text-sky-600 hover:underline"
-          href="/"
-        >
+      <div className="flex justify-between items-center p-4 max-w-5xl mx-auto relative z-10">
+        <Link className="" href="/">
           <Image
             className="relative"
             src="/logo.svg"
-            alt="Next.js Logo"
+            alt="Daryl D Logo"
             width={48}
             height={28}
             priority
           />
         </Link>
-        <div className="flex items-center justify-center bg-gradient-to-t lg:static lg:h-auto lg:w-auto lg:bg-none text-yellow-600">
-          Daryl Findlay
-        </div>
+        <div className={`${colorMap[color].text}`}>Daryl Findlay</div>
       </div>
-      <div className="relative flex place-items-center h-80 w-full bg-slate-900  rounded-xl items-center bg-transparent">
-        <h4 className="relative z-10 text-4xl text-center mx-auto text-yellow-200 bg-clip-text text-transparent animate-fade-in-down tracking-tight	">
-          Hi, I&apos;m Daryl. Let&apos;s build something amazing together.
+      <div className="flex place-items-center justify-center items-center flex-col min-h-32 sm:min-h-60 relative z-10">
+        <h4
+          className={`text-xl sm:text-3xl text-center m-auto ${colorMap[color].text} animate-fade-in-down tracking-tight`}
+        >
+          {title}
         </h4>
       </div>
+      <div
+        id="hero-overlay"
+        className="h-full w-full absolute top-0 left-0 opacity-20 bg-black"
+      ></div>
     </div>
   );
 }

@@ -1,18 +1,15 @@
+import Header from "@/components/layout/Header";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="relative max-w-6xl min-h 64 bg-white p-6 mx-auto -translate-y-7 rounded-md flex flex-col gap-4">
-      <div className="w-full flex justify-center gap-2 h-64">
-        <div className="w-3/5 border bg-yellow-950 text-white">Hey</div>
-        <div className="w-2/5 border bg-yellow-950 text-white">Boy</div>
-      </div>
-      <div className="w-full flex justify-center gap-2 h-48">
-        <div className="grow border bg-yellow-950 text-white">Hey</div>
-        <div className="grow border bg-yellow-950 text-white">Boy</div>
-        <div className="grow border bg-yellow-950 text-white">Boy</div>
-      </div>
-    </div>
+    <>
+      <Header
+        color="yellow"
+        title="Hi, I'm Daryl. Let's build something amazing together."
+      />
+      <div className="sm:rounded-md bg-offwhite mx-auto -translate-y-6 w-full sm:w-11/12 max-w-5xl h-32"></div>
+    </>
   );
   // return (
   //   <div className="relative max-w-5xl mx-auto p-4 bg-white">
