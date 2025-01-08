@@ -27,8 +27,17 @@ const config: Config = {
         'fade-in-right': 'fade-in-right .5s ease-in-out',
         'fade-in-down': 'fade-in-down .5s ease-in-out',
         'fade-in-up': 'fade-in-up .5s ease-in-out',
+        'appear': 'appear .5s ease-in-out',
       },
       keyframes: {
+        'appear': {
+          '0%': {
+            opacity: '0',
+          },
+          '100%': {
+            opacity: '1',
+          },
+        },
         'fade-in-left': {
           '0%': {
             opacity: '0',

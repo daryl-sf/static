@@ -8,7 +8,40 @@ export default function Home() {
         color="yellow"
         title="Hi, I'm Daryl. Let's build something amazing together."
       />
-      <div className="sm:rounded-md bg-offwhite mx-auto -translate-y-6 w-full sm:w-11/12 max-w-5xl h-32"></div>
+      <div className="sm:rounded-md bg-offwhite mx-auto -translate-y-6 w-full sm:w-11/12 max-w-5xl flex justify-between flex-col sm:flex-row">
+        <Link
+          href="/apps"
+          className="border border-transparent px-5 py-4 transition-colors animate-appear"
+        >
+          <h2 className={`mb-3 text-2xl font-semibold`}>Apps</h2>
+          <p className={`m-0 max-w-full sm:max-w-[30ch] text-sm text-gray-400`}>
+            Discover a list of projects I have started. Some are finished. Most
+            are not. 🏗️ Under construction
+          </p>
+        </Link>
+        <a
+          href="https://github.com/daryl-sf"
+          className="border border-transparent px-5 py-4 transition-colors animate-appear"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h2 className={`mb-3 text-2xl font-semibold`}>Github</h2>
+          <p className={`m-0 max-w-full sm:max-w-[30ch] text-sm text-gray-400`}>
+            Find out more about me on Github. I have a few repositories. Some
+            are finished. Most are not.
+          </p>
+        </a>
+        <Link
+          href="/cv"
+          className="border border-transparent px-5 py-4 transition-colors animate-appear"
+        >
+          <h2 className={`mb-3 text-2xl font-semibold`}>CV</h2>
+          <p className={`m-0 max-w-full sm:max-w-[30ch] text-sm text-gray-400`}>
+            Explore the path I have taken to get to where I am today. I&apos;ve
+            had a few jobs. Most are finished. One is not.
+          </p>
+        </Link>
+      </div>
     </>
   );
   // return (
