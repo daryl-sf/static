@@ -8,18 +8,36 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        offwhite: '#f8f8f8',
+      },
+      backgroundPosition: {
+        hero: 'center 70%',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
+      transition: {
+        grayscale: 'grayscale .5s ease-in-out',
       },
       animation: {
         'fade-in-left': 'fade-in-left .5s ease-in-out',
         'fade-in-right': 'fade-in-right .5s ease-in-out',
         'fade-in-down': 'fade-in-down .5s ease-in-out',
         'fade-in-up': 'fade-in-up .5s ease-in-out',
+        'appear': 'appear .5s ease-in-out',
       },
       keyframes: {
+        'appear': {
+          '0%': {
+            opacity: '0',
+          },
+          '100%': {
+            opacity: '1',
+          },
+        },
         'fade-in-left': {
           '0%': {
             opacity: '0',
