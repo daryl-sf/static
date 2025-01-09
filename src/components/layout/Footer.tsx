@@ -16,14 +16,17 @@ export default function Footer() {
           />
         </Link>
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-8">
-          <Link href="/about" className="hover:underline">
+          <Link href="#profile" className="hover:underline">
             About
           </Link>
-          <Link href="/blog" className="hover:underline">
+          {/* <Link href="/blog" className="hover:underline">
             Blog
-          </Link>
-          <Link href="/contact" className="hover:underline">
+          </Link> */}
+          {/* <Link href="/contact" className="hover:underline">
             Contact
+          </Link> */}
+          <Link href="/Daryl-Findlay-CV-2025.pdf" className="hover:underline">
+            CV
           </Link>
           <Link href="/" className="hover:underline">
             Daryl Findlay
