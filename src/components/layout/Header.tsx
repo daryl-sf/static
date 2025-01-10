@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Neuton } from "next/font/google";
+import { Mada, Neuton } from "next/font/google";
 
 interface IHeaderProps {
   color?: "yellow" | "blue" | "green" | "red";
@@ -19,6 +19,11 @@ const neuton = Neuton({
   weight: "400",
 });
 
+const mada = Mada({
+  subsets: ["latin"],
+  weight: "500",
+});
+
 export default function Header({ color = "yellow", title }: IHeaderProps) {
   return (
     <div
@@ -35,9 +40,19 @@ export default function Header({ color = "yellow", title }: IHeaderProps) {
             priority
           />
         </Link>
-        <div className={`${colorMap[color].text}`}>
+        <div
+          className={`${colorMap[color].text} ${mada.className} text-lg tracking-wide`}
+        >
           <nav>
-            <ul className="flex space-x-4">
+            <ul className="flex space-x-8">
+              <li>
+                <a
+                  href="mailto:darylfindlay@gmail.com"
+                  className="hover:underline"
+                >
+                  Contact
+                </a>
+              </li>
               <li>
                 <Link
                   className="hover:underline"
@@ -57,7 +72,7 @@ export default function Header({ color = "yellow", title }: IHeaderProps) {
       </div>
       <div className="flex place-items-center justify-center items-center flex-col min-h-32 sm:min-h-60 relative z-10">
         <h4
-          className={`text-3xl sm:text-6xl text-center mt-4 sm:mt-auto m-auto ${colorMap[color].text} ${neuton.className} animate-fade-in-down tracking-tight`}
+          className={`text-3xl sm:text-6xl text-center mt-4 sm:mt-auto m-auto ${colorMap[color].text} ${neuton.className} animate-fade-in-down tracking-normal`}
         >
           {title}
         </h4>

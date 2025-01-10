@@ -2,6 +2,7 @@ import Header from "@/components/layout/Header";
 import Image from "next/image";
 import { Mada, Neuton } from "next/font/google";
 import Link from "next/link";
+import { Section } from "@/components/Section";
 
 const neuton = Neuton({
   subsets: ["latin"],
@@ -27,7 +28,7 @@ export default function Home() {
             alt="Daryl and Darragh"
             width={222}
             height={222}
-            className="rounded-full aspect-square border-8 border-offwhite"
+            className="rounded-3xl aspelct-square border-8 border-offwhite"
           />
           <div className={`${neuton.className} text-6xl text-center`}>
             Hi! I&apos;m Daryl. I&apos;m a software engineer 👨🏼‍💻
@@ -48,43 +49,74 @@ export default function Home() {
           <section>
             <h4 className={`text-3xl ${mada.className}`}>My Expertise</h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-20 gap-y-10 pt-4">
-              <div className="shrink grow">
-                <h4 className={`text-2xl ${mada.className}`}>📱 Front End</h4>
-                <p>
+              <Section title="📱 Front End">
+                <>
                   My passion is building responsive, accessible web applications
                   using modern frameworks such like React, Remix, NextJS, and
                   TailwindCSS. I have a keen eye for design and strive to create
                   beautiful, intuitive user interfaces.
-                </p>
-              </div>
-              <div className="shrink grow">
-                <h4 className={`text-2xl ${mada.className}`}>
-                  🧪 QA & Testing
-                </h4>
-                <p>
+                </>
+              </Section>
+              <Section title="🖥️ Back End">
+                <>
+                  Proficient in building scalable, secure back-end services
+                  using NodeJS, Express, Rails and GraphQL. Skilled in designing
+                  APIs, optimizing performance, and ensuring robust data
+                  handling.
+                </>
+              </Section>
+              <Section title="🧪 QA & Testing">
+                <>
                   Experienced in modern testing methodologies, with a strong
                   focus on unit, integration, and end-to-end testing. I leverage
                   modern testing libraries with TDD to create comprehensiv test
                   suites that ensure high-quality and robust code.
-                </p>
-              </div>
-              <div className="shrink grow">
-                <h4 className={`text-2xl ${mada.className}`}>🚦 Automation</h4>
-                <p>
+                </>
+              </Section>
+              <Section title="🚦 Automation">
+                <>
                   Proficient in building CI/CD pipelines to automate the
                   deployment of applications. I setup continuous integration,
                   automated builds and tests, and continuous deployment to
                   ensure fast and reliable delivery of code. Saving time and
                   effort.
-                </p>
-              </div>
-              <div className="shrink grow">
-                <h4 className={`text-2xl ${mada.className}`}>🐳 Devops</h4>
-                <p>
+                </>
+              </Section>
+              <Section title="🐳 Devops">
+                <>
                   Skilled in DevOps practices, including serverless
                   architectures for scalability and Dockerization for
                   consistent, containerized environments. I have experience with
                   cloud providers such as AWS, and Netlify.
+                </>
+              </Section>
+              <Section title="🧠 Mentality">
+                <>
+                  I have a growth mindset and a passion for learning. I am
+                  always looking for new challenges and opportunities to expand
+                  my knowledge and skills. I am a team player and enjoy
+                  collaborating with others to achieve common goals.
+                </>
+              </Section>
+            </div>
+          </section>
+        </div>
+        <div id="contact" className="flex flex-col gap-12">
+          <section>
+            <h4 className={`text-3xl ${mada.className}`}>Contact Me</h4>
+            <div className="flex gap-20">
+              <div className="shrink">
+                <p>
+                  I&apos;m always open to new opportunities and challenges. If
+                  you have a project you&apos;d like to discuss or just want to
+                  say hi, feel free to reach out to me at{" "}
+                  <a
+                    href="mailto:darylfindlay@gmail.com"
+                    className="text-yellow-500"
+                  >
+                    darylfindlay@gmail.com
+                  </a>
+                  .
                 </p>
               </div>
             </div>
