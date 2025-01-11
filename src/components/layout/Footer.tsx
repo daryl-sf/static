@@ -25,7 +25,11 @@ export default function Footer() {
           {/* <Link href="/contact" className="hover:underline">
             Contact
           </Link> */}
-          <Link href="/Daryl-Findlay-CV-2025.pdf" className="hover:underline">
+          <Link
+            href="/Daryl-Findlay-CV-2025.pdf"
+            className="hover:underline"
+            target="_blank"
+          >
             CV
           </Link>
           <Link href="/" className="hover:underline">

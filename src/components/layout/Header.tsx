@@ -57,6 +57,7 @@ export default function Header({ color = "yellow", title }: IHeaderProps) {
                 <Link
                   className="hover:underline"
                   href="/Daryl-Findlay-CV-2025.pdf"
+                  target="_blank"
                 >
                   CV
                 </Link>
