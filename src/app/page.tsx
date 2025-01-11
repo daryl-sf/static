@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
       <Header color="yellow" title="Let's build something amazing together." />
-      <div className="mx-2 sm:mx-auto -translate-y-6 w-full sm:w-11/12 max-w-4xl flex flex-col gap-12">
+      <div className="sm:mx-auto -translate-y-6 w-full sm:w-11/12 max-w-4xl flex flex-col gap-12">
         <div
           id="profile"
           className="flex gap-12 items-center flex-col sm:flex-row"
@@ -28,13 +28,16 @@ export default function Home() {
             alt="Daryl and Darragh"
             width={222}
             height={222}
-            className="rounded-3xl aspelct-square border-8 border-offwhite"
+            className="rounded-3xl aspelct-square border-8 border-offwhite bg-offwhite"
+            priority
           />
-          <div className={`${neuton.className} text-6xl text-center`}>
+          <div
+            className={`${neuton.className} text-5xl sm:text-6xl text-center`}
+          >
             Hi! I&apos;m Daryl. I&apos;m a software engineer 👨🏼‍💻
           </div>
         </div>
-        <div id="expertise" className="flex flex-col gap-12">
+        <div id="expertise" className="flex flex-col gap-12 mx-4">
           <section>
             <h4 className={`text-3xl ${mada.className}`}>About Me</h4>
             <div className="flex gap-20">
@@ -101,7 +104,7 @@ export default function Home() {
             </div>
           </section>
         </div>
-        <div id="contact" className="flex flex-col gap-12">
+        <div id="contact" className="flex flex-col gap-12 mx-4">
           <section>
             <h4 className={`text-3xl ${mada.className}`}>Contact Me</h4>
             <div className="flex gap-20">
